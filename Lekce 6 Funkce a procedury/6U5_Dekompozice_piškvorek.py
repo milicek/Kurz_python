@@ -111,7 +111,6 @@ def vyhodnoceni_sloupec(pole):
                 break
     for i in range(5):
         pass
-    print("ahoj")
 
 
 def main():
