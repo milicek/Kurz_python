@@ -110,6 +110,7 @@ def vyhodnoceni_sloupec(pole):
                 hrac = pole.index[radek][symbol]
                 break
     for i in range(5):
+        pass
 
 
 
