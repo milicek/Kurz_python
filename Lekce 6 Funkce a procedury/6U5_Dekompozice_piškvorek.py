@@ -73,7 +73,7 @@ def tah(pole):
             try:
                 radek = int(souradnice[1:])
                 if radek > len(pole):
-                    print("Zadal jsi větší číslo než je počet řádků ")
+                    print("Zadal jsi větší číslo než je počet řádků")
                     continue
                 else:
                     if pole[(int(souradnice[1:]))-1][(string.ascii_lowercase.index(souradnice[0].lower()))+1] != "   ":
@@ -110,7 +110,7 @@ def vyhodnoceni_sloupec(pole):
                 hrac = pole.index[radek][symbol]
                 break
     for i in range(5):
-        pass
+
 
 
 def main():
