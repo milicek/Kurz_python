@@ -104,13 +104,25 @@ def vyhodnoceni_radek(pole):
 
 
 def vyhodnoceni_sloupec(pole):
-    for radek in pole:
-        for symbol in radek:
-            if symbol != "   ":
-                hrac = pole.index[radek][symbol]
+    for i in range(len(pole)):
+        for j in range(len(pole)):
+            if pole[i][j] != "   ":
+                x,y = i,j
+                hrac = pole[i][j]
                 break
-    for i in range(5):
-        pass
+    pocet = 1
+    while True:
+        x += 1
+        if pole[x][y] != hrac or pocet >= 5:
+            break
+        else:
+            pocet += 1
+            print(pocet)
+    if pocet == 5:
+        return hrac
+    else:
+        return ""
+
 
 
 def main():
@@ -129,6 +141,9 @@ def main():
             print(f"Hraje hráč se symbolem{hrac}")
             zapis_pozice(pole,tah(pole),hrac)
             vitez = vyhodnoceni_radek(pole)
+            print("radek" + vitez)
+            vitez = vyhodnoceni_sloupec(pole)
+            print("sloupec" + vitez)
         zobraz_pole(pole)
 
 
